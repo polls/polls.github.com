@@ -1,0 +1,239 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:focus {
+	outline :none;
+}
+
+
+/* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+body {
+	color: #666;
+	font-family: Ubuntu,sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 24px;
+	background: #fff url("../img/generated.png") 0 0 repeat;
+	/*overflow-y: hidden;
+
+	height: 3000px;*/
+}
+
+	body:before { /* top shadow */ 
+		content: ""; 
+		position: fixed; 
+		top: -10px; 
+		left: -10px; 
+		width: 110%; 
+		height: 10px;  
+		box-shadow: 0px 0px 10px rgba(0,0,0,.3);  
+		z-index: 100; 
+	}
+
+#wrapper {
+	width: 500px;
+	margin: 0 auto 100px;
+	padding-top: 130px;
+}
+
+h1 {
+	font-size: 20px;
+}
+
+p {
+	line-height: 28px;
+	margin: 100px 0;
+	text-indent: 15px;
+}
+
+section {
+	/*width: 300px;*/
+	background: #fff;
+	text-align: center;
+	padding: 0;
+	border: solid 1px #ccc;
+	border-radius: 3px;
+	-moz-box-shadow: 0 2px 4px -2px #aaa;
+	box-shadow: 0 2px 4px -2px #aaa;
+	margin-bottom: 100px;
+}
+
+	section.begin {
+		display: block;
+	}
+
+	section p {
+		margin: 0;
+		text-indent: 0;
+	}
+	
+	#message {
+		margin: 15px;
+	}
+
+	section p:nth-child(2){
+		border-top: solid 1px #eee;
+	}
+
+	section button {
+		margin: 0;
+		padding: 0;
+		height: 40px;
+		border: 0;
+		background: #fff;
+		font-family: Ubuntu,sans-serif;
+		font-weight: 300;
+		width: 100%;
+		border-radius: 2px;
+	}
+
+		.oui, .non {
+			width: 50%;
+		}
+
+		.buttons button:first-child {
+			border-right: solid 1px #eee;
+			border-radius: 0 0 0 2px;
+		}
+
+		.buttons button:last-child {
+			border-radius: 0 0 2px 0;
+		}
+
+		.oui {
+			color: green;
+		}
+
+			.oui:hover, .green-h { background: #349534 }
+
+		.non, .red {
+			color: red
+		}
+
+			.non:hover, .red-h { background: #D12F19 }
+
+		.neutral {
+			color: #656565;
+		}
+
+			.neutral:hover { background: #656565; }
+	
+	button:hover, .green-h, .red-h {
+		color: #fff;
+		cursor: pointer;
+	}
+
+	.green-h, .red-h {
+		border-color: transparent;
+	}
+
+button {
+	transition: all .3s;
+	-moz-transition: all .3s;
+	-webkit-transition: all .3s;
+	-o-transition: all .3s;
+}
+
+
+canvas {
+	display: none;
+}
+
+#progress {
+	width: 100px;
+	height: 10px;
+	background: #eee;
+	float: right;
+}
+
+#indicator {
+	height: 100%;
+	width: 0;
+	background: #ccc;
+}
+
+
+
+.r5 {
+	width: 20%;
+}
+
+input {
+	display: none;
+}
+
+label {
+	display: inline-block;
+	width: 100%;
+	border-right: solid 1px #eee;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+
+label:last-child {
+	border-right: 0;
+}
+
+label:hover {
+	background: #eee;
+	cursor: pointer;
+}
+
+[type=radio]:checked + label {
+	background: green;
+	color: #fff;
+}
